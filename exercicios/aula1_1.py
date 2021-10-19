@@ -1,0 +1,11 @@
+nome = input("Digite o seu nome completo:")
+cpf = input("Digite seu CPF:")
+idade = input("Digite sua idade:")
+
+print('-------------------------')
+print('Confirmação de cadastro: ')
+print('Nome:',nome)
+print('CPF:', cpf)
+print('Idade:', idade)
+print('\n')
+print('-------------------------')
