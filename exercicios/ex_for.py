@@ -1,9 +1,11 @@
 string = input('insira um texto:')
 
 for i in string:
-    if i == i.lower():
-        print(i, "- é minisculo")
-    elif i == i.upper():
+    if i.isupper():
         print(i, "- é maisculo")
+    elif i.islower():
+        print(i, "- é minusculo")
+    elif i.isnumeric():
+        print(i, "- é numerico")
     else:
-        print(i, "- é numero ou outra coisa")
+        print(i, "- é alguma outra coisa")
