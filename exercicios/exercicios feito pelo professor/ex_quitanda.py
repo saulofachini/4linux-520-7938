@@ -31,8 +31,15 @@ quitanda = {
 }
 
 
-def calculaItem():
-    print('calculando')
+def adicionaCesta(fruta):
+    cesta[fruta] = cesta.get(fruta, 0) + 1
+
+
+def calculaCesta(fruta):
+    total = 0
+    for (fruta, quantidade) in cesta.items():
+        total += quantidade * quitanda[fruta]
+    print(f"Total: R$ {total}")
 
 
 while True:
@@ -67,21 +74,14 @@ while True:
                 break
 
             elif 0 <= entrada < len(quitanda_ks):
-                calculaItem(entrada)
                 fruta = quitanda_ks[entrada]
-                cesta[fruta] = cesta.get(fruta, 0) + 1
-
+                adicionaCesta(fruta)
             else:
                 print("Digite uma opção válida.")
 
     elif entrada == 3:
         print("Cesta:", cesta)
-
-        total = 0
-        for (fruta, quantidade) in cesta.items():
-            total += quantidade * quitanda[fruta]
-
-        print(f"Total: R$ {total}")
+        calculaCesta(fruta)
 
     else:
         print("Digite uma opção válida.")
