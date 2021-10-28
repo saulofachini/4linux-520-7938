@@ -1,0 +1,10 @@
+{
+    "registros": [
+        {
+            "cpf": "00000000000",
+            "nome": "Bob",
+            "idade": "50",
+            "endere\u00e7o": "Avenida Brasil"
+        }
+    ]
+}
